@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>agents.2nth.ai — The 2nth Agent Team</title>
+  <link rel="icon" type="image/svg+xml" href="https://2nth.ai/favicon.svg">
+  <meta name="description" content="The 2nth AI agent team. Specialists across marketing, engineering, design, and operations — working alongside Craig to build and ship products 100x faster.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('2nth-theme');if(t==='light')document.documentElement.classList.add('light');})()</script>
+  <style>
+    :root {
+      --c-carbon:#0a0a0a; --c-graphite:#141414; --c-gunmetal:#1c1c1e; --c-chassis:#232326;
+      --c-titanium:#fafafa; --c-brand:#06b6d4; --c-live:#22c55e; --c-amber:#EDAF42;
+      --c-steel-900:#27272a; --c-steel-800:#3f3f46; --c-steel-700:#52525b;
+      --c-steel-600:#71717a; --c-steel-500:#a1a1aa; --c-steel-400:#c4c4cc;
+      --c-steel-300:#d4d4d8;
+      --c-border:hsla(0,0%,100%,.06); --c-border-s:hsla(0,0%,100%,.10);
+    }
+    .light {
+      --c-carbon:#ffffff; --c-graphite:#f7f8fa; --c-gunmetal:#f0f1f3; --c-chassis:#e8e9eb;
+      --c-titanium:#0a0a0a; --c-border:rgba(0,0,0,.07); --c-border-s:rgba(0,0,0,.12);
+      --c-steel-900:#fafafa; --c-steel-800:#e4e4e7; --c-steel-700:#a1a1aa;
+      --c-steel-600:#71717a; --c-steel-500:#52525b; --c-steel-400:#3f3f46;
+      --c-steel-300:#27272a;
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Barlow',sans-serif; background:var(--c-carbon); color:var(--c-steel-500); line-height:1.6; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+    a { color:inherit; text-decoration:none; }
+
+    /* NAV */
+    nav { position:fixed; top:0; left:0; right:0; z-index:50; background:color-mix(in srgb,var(--c-carbon) 88%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--c-border); }
+    .nav-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 24px; }
+    .nav-brand { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:.05em; color:var(--c-titanium); }
+    .nav-brand span.accent { color:var(--c-brand); }
+    .nav-brand span.tag { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-brand); font-weight:600; margin-left:6px; letter-spacing:1px; }
+    .nav-links { display:flex; align-items:center; gap:20px; }
+    .nav-link { font-family:'JetBrains Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--c-steel-600); transition:color .15s; }
+    .nav-link:hover { color:var(--c-steel-400); }
+    .nav-link.active { color:var(--c-steel-300); }
+    .theme-toggle { display:flex; min-height:36px; min-width:36px; align-items:center; justify-content:center; border-radius:4px; border:1px solid var(--c-border); background:none; color:var(--c-steel-600); cursor:pointer; transition:color .15s,border-color .15s; }
+    .theme-toggle:hover { color:var(--c-steel-400); border-color:var(--c-border-s); }
+
+    /* LAYOUT */
+    .page { max-width:1100px; margin:0 auto; padding:0 24px; }
+    section { padding:80px 0; }
+
+    /* GRID BG */
+    .grid-bg { background-image:linear-gradient(var(--c-border) 1px,transparent 1px),linear-gradient(90deg,var(--c-border) 1px,transparent 1px); background-size:40px 40px; }
+
+    /* HERO */
+    .hero { min-height:60vh; display:flex; align-items:center; padding-top:72px; position:relative; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0; }
+    .hero-bg-grid { position:absolute; inset:0; background-image:linear-gradient(var(--c-border) 1px,transparent 1px),linear-gradient(90deg,var(--c-border) 1px,transparent 1px); background-size:40px 40px; }
+    .hero-content { position:relative; z-index:1; padding:80px 24px; max-width:1100px; margin:0 auto; width:100%; }
+    .eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--c-brand); font-weight:600; margin-bottom:16px; display:flex; align-items:center; gap:8px; opacity:.8; }
+    .dot-live { width:6px; height:6px; border-radius:50%; background:var(--c-live); animation:blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,7vw,76px); line-height:.95; letter-spacing:.02em; color:var(--c-titanium); margin-bottom:16px; }
+    h1 .brand { color:var(--c-brand); }
+    .hero-sub { font-size:18px; color:var(--c-steel-400); max-width:580px; line-height:1.7; margin-bottom:32px; }
+    .btn-primary { display:inline-block; background:var(--c-brand); color:#000; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; padding:13px 28px; border-radius:3px; letter-spacing:.5px; transition:opacity .15s; }
+    .btn-primary:hover { opacity:.85; }
+    .btn { display:inline-block; border:1px solid var(--c-border-s); color:var(--c-steel-400); font-family:'JetBrains Mono',monospace; font-size:12px; padding:12px 24px; border-radius:3px; transition:border-color .15s,color .15s; }
+    .btn:hover { border-color:var(--c-steel-600); color:var(--c-titanium); }
+    .btns { display:flex; gap:12px; flex-wrap:wrap; }
+
+    /* SECTION TITLES */
+    .sec-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--c-steel-700); font-weight:600; margin-bottom:8px; }
+    h2 { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,5vw,48px); letter-spacing:.03em; color:var(--c-titanium); line-height:1; margin-bottom:12px; }
+    .section-intro { font-size:16px; color:var(--c-steel-500); max-width:560px; line-height:1.7; margin-bottom:40px; }
+
+    /* AGENT CARDS */
+    .agents-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1px; background:var(--c-border); border:1px solid var(--c-border); border-radius:6px; overflow:hidden; }
+    .agent-card { background:var(--c-graphite); padding:28px; transition:background .15s; position:relative; }
+    .agent-card:hover { background:var(--c-gunmetal); }
+    .agent-card.active { background:var(--c-graphite); }
+    .agent-card.inactive { opacity:.45; pointer-events:none; }
+    .agent-status { display:flex; align-items:center; gap:6px; margin-bottom:16px; }
+    .status-dot { width:7px; height:7px; border-radius:50%; }
+    .status-dot.live { background:var(--c-live); animation:blink 2s infinite; }
+    .status-dot.soon { background:#F59E0B; }
+    .status-dot.planned { background:var(--c-steel-700); }
+    .status-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1.5px; font-weight:600; }
+    .status-label.live { color:var(--c-live); }
+    .status-label.soon { color:#F59E0B; }
+    .status-label.planned { color:var(--c-steel-700); }
+    .agent-pillar { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; margin-bottom:10px; }
+    .agent-name { font-family:'Bebas Neue',sans-serif; font-size:32px; letter-spacing:.03em; color:var(--c-titanium); margin-bottom:4px; line-height:1; }
+    .agent-role { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-steel-600); letter-spacing:.5px; margin-bottom:12px; text-transform:uppercase; }
+    .agent-bio { font-size:14px; color:var(--c-steel-500); line-height:1.65; margin-bottom:20px; }
+    .agent-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px; }
+    .agent-tag { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--c-steel-700); border:1px solid var(--c-border); border-radius:3px; padding:3px 8px; }
+    .agent-link { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c-brand); transition:opacity .15s; }
+    .agent-link:hover { opacity:.7; }
+    .agent-accent-bar { position:absolute; top:0; left:0; right:0; height:2px; }
+
+    /* OPERATOR CARD */
+    .operator-section { border-top:1px solid var(--c-border); padding-top:80px; }
+    .operator-card { background:var(--c-graphite); border:1px solid var(--c-border); border-radius:6px; padding:36px; display:grid; grid-template-columns:1fr 2fr; gap:32px; }
+    @media(max-width:640px){ .operator-card { grid-template-columns:1fr; } }
+    .operator-avatar { width:80px; height:80px; border-radius:50%; background:var(--c-chassis); border:2px solid var(--c-border-s); display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--c-brand); margin-bottom:16px; }
+    .operator-name { font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--c-titanium); letter-spacing:.03em; }
+    .operator-role { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-steel-600); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; }
+    .operator-bio { font-size:15px; color:var(--c-steel-400); line-height:1.7; }
+
+    /* BRIEF STREAM */
+    .stream { border-top:1px solid var(--c-border); }
+    .stream-item { border-bottom:1px solid var(--c-border); padding:20px 0; display:grid; grid-template-columns:100px 1fr auto; gap:20px; align-items:start; }
+    @media(max-width:640px){ .stream-item { grid-template-columns:1fr; } }
+    .stream-date { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-steel-700); }
+    .stream-title { font-size:15px; color:var(--c-steel-300); font-weight:500; }
+    .stream-agent { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--c-brand); letter-spacing:1px; background:rgba(6,182,212,.08); border:1px solid rgba(6,182,212,.15); border-radius:3px; padding:3px 8px; white-space:nowrap; }
+
+    /* MANIFESTO */
+    .manifesto { background:var(--c-graphite); border:1px solid var(--c-border); border-left:3px solid var(--c-brand); padding:32px 36px; border-radius:3px; }
+    .manifesto p { font-size:18px; color:var(--c-steel-300); line-height:1.8; }
+    .manifesto p + p { margin-top:16px; }
+
+    /* FOOTER */
+    footer { border-top:1px solid var(--c-border); padding:32px 24px; }
+    .footer-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+    .footer-brand { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c-steel-700); }
+    .footer-links { display:flex; gap:24px; }
+    .footer-links a { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c-steel-700); transition:color .15s; }
+    .footer-links a:hover { color:var(--c-steel-400); }
+
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      .hero-content { padding:60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <span class="accent">2</span>NTH<span class="tag">AGENTS</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link active">Team</a>
+      <a href="/mary.html" class="nav-link">Mary</a>
+      <a href="https://2nth.ai" class="nav-link">2nth.ai</a>
+      <button onclick="toggleTheme()" class="theme-toggle" title="Toggle theme">
+        <svg id="icon-sun" class="hidden" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg id="icon-moon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="main">
+  <div class="hero-bg"><div class="hero-bg-grid"></div></div>
+  <div class="hero-content">
+    <div class="eyebrow">
+      <span class="dot-live"></span>
+      AGENTS.2NTH.AI — AGENT TEAM DIRECTORY
+    </div>
+    <h1>THE <span class="brand">2NTH</span><br>AGENT TEAM</h1>
+    <p class="hero-sub">AI specialists working alongside Craig to build and ship products 100x faster. Each agent is a domain expert — not a chatbot. They produce real deliverables, run real campaigns, and get sharper with every task.</p>
+    <div class="btns">
+      <a href="/mary.html" class="btn-primary">Meet Mary, Marketing Director &rarr;</a>
+      <a href="https://2nth.ai" class="btn">Back to 2nth.ai</a>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT TEAM -->
+<section>
+  <div class="page">
+    <div class="sec-label">The team</div>
+    <h2>ACTIVE AGENTS</h2>
+    <p class="section-intro">Each agent is a specialist. They work across defined domains, produce outputs aligned to 2nth's operator model, and compound — every task makes the next one faster.</p>
+
+    <div class="agents-grid">
+
+      <!-- MARY — ACTIVE -->
+      <a href="/mary.html" class="agent-card active" style="cursor:pointer;">
+        <div class="agent-accent-bar" style="background:linear-gradient(90deg,#EDAF42,rgba(237,175,66,0))"></div>
+        <div class="agent-status">
+          <span class="status-dot live"></span>
+          <span class="status-label live">ACTIVE</span>
+          <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c-steel-700);">SINCE APR 2026</span>
+        </div>
+        <div class="agent-pillar" style="color:#EDAF42;">MARKETING</div>
+        <div class="agent-name">MARY</div>
+        <div class="agent-role">B2B Marketing Director</div>
+        <p class="agent-bio">World-class B2B marketing director. Strategy, content, campaigns, and demand generation for 2nth.ai and its clients. Trained across 15 years of B2B playbooks — from HubSpot growth methodology to modern AI-native GTM. Thinks in funnels, writes in punchy plain English, and believes that operators beat departments every time.</p>
+        <div class="agent-tags">
+          <span class="agent-tag">B2B Strategy</span>
+          <span class="agent-tag">Content</span>
+          <span class="agent-tag">LinkedIn</span>
+          <span class="agent-tag">Demand Gen</span>
+          <span class="agent-tag">Positioning</span>
+          <span class="agent-tag">South Africa</span>
+        </div>
+        <span class="agent-link">View profile &amp; work &rarr;</span>
+      </a>
+
+      <!-- FUTURE: DEV AGENT -->
+      <div class="agent-card inactive">
+        <div class="agent-accent-bar" style="background:linear-gradient(90deg,#0EA5E9,rgba(14,165,233,0))"></div>
+        <div class="agent-status">
+          <span class="status-dot soon"></span>
+          <span class="status-label soon">COMING SOON</span>
+        </div>
+        <div class="agent-pillar" style="color:#0EA5E9;">SOFTWARE</div>
+        <div class="agent-name">ALEX</div>
+        <div class="agent-role">Senior Software Engineer</div>
+        <p class="agent-bio">Full-stack engineering agent. Cloudflare Workers, D1, edge-first APIs, TypeScript. Handles architecture decisions, code review, and implementation at production speed.</p>
+        <div class="agent-tags">
+          <span class="agent-tag">TypeScript</span>
+          <span class="agent-tag">Cloudflare</span>
+          <span class="agent-tag">API Design</span>
+          <span class="agent-tag">Edge</span>
+        </div>
+      </div>
+
+      <!-- FUTURE: DESIGN AGENT -->
+      <div class="agent-card inactive">
+        <div class="agent-accent-bar" style="background:linear-gradient(90deg,#6366F1,rgba(99,102,241,0))"></div>
+        <div class="agent-status">
+          <span class="status-dot soon"></span>
+          <span class="status-label soon">COMING SOON</span>
+        </div>
+        <div class="agent-pillar" style="color:#6366F1;">DESIGN</div>
+        <div class="agent-name">LENS</div>
+        <div class="agent-role">Product Design Director</div>
+        <p class="agent-bio">Design agent trained across 7 design lenses — Reframe, Friction, Behaviour, Heuristic, AI Trust, Systems, Emotion. Produces design briefs, component specs, and UX analysis.</p>
+        <div class="agent-tags">
+          <span class="agent-tag">UX</span>
+          <span class="agent-tag">Systems Design</span>
+          <span class="agent-tag">Brand</span>
+          <span class="agent-tag">Prototyping</span>
+        </div>
+      </div>
+
+      <!-- FUTURE: HARDWARE AGENT -->
+      <div class="agent-card inactive">
+        <div class="agent-accent-bar" style="background:linear-gradient(90deg,#06B6D4,rgba(6,182,212,0))"></div>
+        <div class="agent-status">
+          <span class="status-dot planned"></span>
+          <span class="status-label planned">PLANNED</span>
+        </div>
+        <div class="agent-pillar" style="color:#06B6D4;">HARDWARE</div>
+        <div class="agent-name">CHIP</div>
+        <div class="agent-role">Embedded Systems Architect</div>
+        <p class="agent-bio">Firmware and embedded systems agent. STM32, ESP32, nRF52, FreeRTOS, Zephyr. Generates peripheral drivers, comms stacks, and hardware abstraction layers.</p>
+        <div class="agent-tags">
+          <span class="agent-tag">Firmware</span>
+          <span class="agent-tag">RTOS</span>
+          <span class="agent-tag">BLE</span>
+          <span class="agent-tag">IoT</span>
+        </div>
+      </div>
+
+      <!-- FUTURE: ROBOTICS AGENT -->
+      <div class="agent-card inactive">
+        <div class="agent-accent-bar" style="background:linear-gradient(90deg,#10B981,rgba(16,185,129,0))"></div>
+        <div class="agent-status">
+          <span class="status-dot planned"></span>
+          <span class="status-label planned">PLANNED</span>
+        </div>
+        <div class="agent-pillar" style="color:#10B981;">ROBOTICS</div>
+        <div class="agent-name">MOTION</div>
+        <div class="agent-role">Robotics &amp; Edge AI Engineer</div>
+        <p class="agent-bio">Autonomy and edge AI agent. ROS2, SLAM, sensor fusion, TFLite deployment. Handles control systems, navigation stacks, and fleet telemetry pipelines.</p>
+        <div class="agent-tags">
+          <span class="agent-tag">ROS2</span>
+          <span class="agent-tag">Edge AI</span>
+          <span class="agent-tag">SLAM</span>
+          <span class="agent-tag">Fleet Ops</span>
+        </div>
+      </div>
+
+      <!-- FUTURE: OPS AGENT -->
+      <div class="agent-card inactive">
+        <div class="agent-accent-bar" style="background:linear-gradient(90deg,#F59E0B,rgba(245,158,11,0))"></div>
+        <div class="agent-status">
+          <span class="status-dot planned"></span>
+          <span class="status-label planned">PLANNED</span>
+        </div>
+        <div class="agent-pillar" style="color:#F59E0B;">OPERATIONS</div>
+        <div class="agent-name">OPS</div>
+        <div class="agent-role">Business Operations Director</div>
+        <p class="agent-bio">ERP integration, invoicing, pipeline management, and financial operations. Connects Sage X3, SAP, and ERPNext to AI workflows. Handles margin, reporting, and client ops.</p>
+        <div class="agent-tags">
+          <span class="agent-tag">ERP</span>
+          <span class="agent-tag">Sage X3</span>
+          <span class="agent-tag">CRM</span>
+          <span class="agent-tag">Finance</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OPERATOR -->
+<section class="operator-section">
+  <div class="page">
+    <div class="sec-label">The operator</div>
+    <h2>CRAIG LEPPAN</h2>
+    <p class="section-intro">Every agent team needs an operator. The person who orchestrates, decides, and takes responsibility for the output.</p>
+    <div class="operator-card">
+      <div>
+        <div class="operator-avatar">CL</div>
+        <div class="operator-name">Craig Leppan</div>
+        <div class="operator-role">Founder, Operator</div>
+      </div>
+      <div>
+        <p class="operator-bio">Craig is the founder and sole operator of 2nth.ai. He runs the agent team, takes client briefs, sets direction across all four pillars — design, software, hardware, and robotics — and is responsible for every output that leaves the platform.</p>
+        <p class="operator-bio" style="margin-top:16px;">The model is simple: Craig brings judgment, domain instinct, and quality control. The agents bring speed, memory, and execution. Neither scales alone. Together, they're 2ⁿ.</p>
+        <p class="operator-bio" style="margin-top:16px;">Based in Johannesburg. Building for South African mid-market businesses and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT OUTPUTS -->
+<section style="padding-top:0;">
+  <div class="page">
+    <div class="sec-label">Recent outputs</div>
+    <h2>LIVE WORK STREAM</h2>
+    <p class="section-intro">What the agents are producing. Updated as work ships.</p>
+    <div class="stream">
+      <div class="stream-item">
+        <div class="stream-date">31 Mar 2026</div>
+        <div>
+          <div class="stream-title">2nth.ai v1.0 — Full platform shipped</div>
+          <div style="font-size:13px;color:var(--c-steel-600);margin-top:4px;">Auth, billing, agents, multi-property nav, Paystack integration, token pricing</div>
+        </div>
+        <span class="stream-agent">PLATFORM</span>
+      </div>
+      <div class="stream-item">
+        <div class="stream-date">31 Mar 2026</div>
+        <div>
+          <div class="stream-title">LinkedIn page copy &amp; 90-day marketing plan</div>
+          <div style="font-size:13px;color:var(--c-steel-600);margin-top:4px;">Company page, personal launch post, April content calendar</div>
+        </div>
+        <span class="stream-agent" style="color:#EDAF42;background:rgba(237,175,66,.08);border-color:rgba(237,175,66,.15);">MARY</span>
+      </div>
+      <div class="stream-item">
+        <div class="stream-date">30 Mar 2026</div>
+        <div>
+          <div class="stream-title">Blog: "The Maths of One Plus One"</div>
+          <div style="font-size:13px;color:var(--c-steel-600);margin-top:4px;">Published thought leadership piece. 2ⁿ thesis. South African mid-market framing.</div>
+        </div>
+        <span class="stream-agent" style="color:#EDAF42;background:rgba(237,175,66,.08);border-color:rgba(237,175,66,.15);">MARY</span>
+      </div>
+      <div class="stream-item">
+        <div class="stream-date">30 Mar 2026</div>
+        <div>
+          <div class="stream-title">skills.2nth.ai + demo.2nth.ai — launched with browse gate</div>
+          <div style="font-size:13px;color:var(--c-steel-600);margin-top:4px;">5-min timed login gate, auth-bar, app-switcher across all pages</div>
+        </div>
+        <span class="stream-agent">PLATFORM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section style="padding-top:0;">
+  <div class="page">
+    <div class="manifesto">
+      <p>The next generation of engineering companies won't have departments. They'll have one operator, a fleet of AI agents, and the right humans at the right time. The agents don't replace the human. They replace the department.</p>
+      <p>Every agent on this team is a specialist. They have a domain, a voice, and a set of skills that compound with every task. The first brief is rough. The tenth is sharp. The hundredth is the competitive advantage.</p>
+      <p style="color:var(--c-brand);">One person. One AI team. To the Nth.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span style="color:var(--c-brand)">2</span>NTH AGENTS — agents.2nth.ai</div>
+    <div class="footer-links">
+      <a href="https://2nth.ai">2nth.ai</a>
+      <a href="https://skills.2nth.ai">Skills</a>
+      <a href="https://demo.2nth.ai">Demo</a>
+    </div>
+    <div class="footer-brand">&copy; 2026</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){var l=document.documentElement.classList.toggle('light');localStorage.setItem('2nth-theme',l?'light':'dark');updateIcons();}
+function updateIcons(){var l=document.documentElement.classList.contains('light');document.getElementById('icon-sun').classList.toggle('hidden',!l);document.getElementById('icon-moon').classList.toggle('hidden',l);}
+updateIcons();
+</script>
+<script src="https://2nth.ai/app-switcher.js"></script>
+<script src="https://2nth.ai/auth-bar.js"></script>
+<script>window._asSwitcher.inject('#nav-links');window._authBar.inject('#nav-links');</script>
+</body>
+</html>

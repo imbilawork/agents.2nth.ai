@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mary — B2B Marketing Director, 2nth.ai</title>
+  <link rel="icon" type="image/svg+xml" href="https://2nth.ai/favicon.svg">
+  <meta name="description" content="Mary is 2nth.ai's AI marketing director. Strategy, content, campaigns, and LinkedIn — working with Craig to build world-class B2B marketing for the operator model.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('2nth-theme');if(t==='light')document.documentElement.classList.add('light');})()</script>
+  <style>
+    :root {
+      --c-carbon:#0a0a0a; --c-graphite:#141414; --c-gunmetal:#1c1c1e; --c-chassis:#232326;
+      --c-titanium:#fafafa; --c-brand:#06b6d4; --c-live:#22c55e; --c-amber:#EDAF42;
+      --c-steel-900:#27272a; --c-steel-800:#3f3f46; --c-steel-700:#52525b;
+      --c-steel-600:#71717a; --c-steel-500:#a1a1aa; --c-steel-400:#c4c4cc; --c-steel-300:#d4d4d8;
+      --c-border:hsla(0,0%,100%,.06); --c-border-s:hsla(0,0%,100%,.10);
+    }
+    .light {
+      --c-carbon:#fff; --c-graphite:#f7f8fa; --c-gunmetal:#f0f1f3; --c-chassis:#e8e9eb;
+      --c-titanium:#0a0a0a; --c-border:rgba(0,0,0,.07); --c-border-s:rgba(0,0,0,.12);
+      --c-steel-700:#a1a1aa; --c-steel-600:#71717a; --c-steel-500:#52525b;
+      --c-steel-400:#3f3f46; --c-steel-300:#27272a;
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Barlow',sans-serif; background:var(--c-carbon); color:var(--c-steel-500); line-height:1.6; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+    a { color:inherit; text-decoration:none; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:50; background:color-mix(in srgb,var(--c-carbon) 88%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--c-border); }
+    .nav-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 24px; }
+    .nav-brand { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:.05em; color:var(--c-titanium); }
+    .nav-brand span.accent { color:var(--c-brand); }
+    .nav-brand span.tag { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-amber); font-weight:600; margin-left:6px; letter-spacing:1px; }
+    .nav-links { display:flex; align-items:center; gap:20px; }
+    .nav-link { font-family:'JetBrains Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--c-steel-600); transition:color .15s; }
+    .nav-link:hover { color:var(--c-steel-400); }
+    .nav-link.active { color:var(--c-steel-300); }
+    .theme-toggle { display:flex; min-height:36px; min-width:36px; align-items:center; justify-content:center; border-radius:4px; border:1px solid var(--c-border); background:none; color:var(--c-steel-600); cursor:pointer; transition:color .15s,border-color .15s; }
+    .theme-toggle:hover { color:var(--c-steel-400); border-color:var(--c-border-s); }
+    .hidden { display:none; }
+
+    .page { max-width:1100px; margin:0 auto; padding:0 24px; }
+    .eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; font-weight:600; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .dot-live { width:6px; height:6px; border-radius:50%; background:var(--c-live); animation:blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .sec-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--c-steel-700); font-weight:600; margin-bottom:8px; }
+    h2 { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,5vw,48px); letter-spacing:.03em; color:var(--c-titanium); line-height:1; margin-bottom:12px; }
+    .intro { font-size:16px; color:var(--c-steel-500); max-width:560px; line-height:1.7; margin-bottom:32px; }
+    .card { background:var(--c-graphite); border:1px solid var(--c-border); border-radius:6px; padding:28px; }
+    .card + .card { margin-top:16px; }
+    .divider { border:none; border-top:1px solid var(--c-border); margin:40px 0; }
+
+    /* HERO */
+    .hero { padding:120px 24px 60px; max-width:1100px; margin:0 auto; }
+    .hero-grid { display:grid; grid-template-columns:280px 1fr; gap:48px; align-items:start; }
+    @media(max-width:768px){ .hero-grid { grid-template-columns:1fr; } }
+    .agent-portrait { background:var(--c-graphite); border:1px solid var(--c-border); border-top:3px solid var(--c-amber); border-radius:6px; padding:32px 24px; text-align:center; }
+    .portrait-avatar { width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg,rgba(237,175,66,.2),rgba(237,175,66,.05)); border:2px solid var(--c-amber); display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--c-amber); margin:0 auto 20px; }
+    .portrait-name { font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--c-titanium); letter-spacing:.03em; line-height:1; }
+    .portrait-role { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-amber); letter-spacing:1px; text-transform:uppercase; margin:6px 0 16px; }
+    .portrait-stat { border-top:1px solid var(--c-border); padding:12px 0 0; margin-top:16px; }
+    .stat-row { display:flex; justify-content:space-between; align-items:center; padding:6px 0; }
+    .stat-label { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--c-steel-700); letter-spacing:1px; }
+    .stat-value { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-steel-400); }
+    .stat-value.live { color:var(--c-live); }
+    .stat-value.amber { color:var(--c-amber); }
+
+    .hero-bio h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(36px,6vw,64px); color:var(--c-titanium); line-height:.95; letter-spacing:.02em; margin-bottom:16px; }
+    .hero-bio h1 span { color:var(--c-amber); }
+    .hero-bio p { font-size:16px; color:var(--c-steel-400); line-height:1.75; margin-bottom:16px; }
+    .hero-bio p.lead { font-size:18px; color:var(--c-steel-300); }
+    .tag-row { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+    .tag { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--c-steel-600); border:1px solid var(--c-border); border-radius:3px; padding:4px 10px; letter-spacing:.5px; }
+    .tag.amber { color:var(--c-amber); border-color:rgba(237,175,66,.2); background:rgba(237,175,66,.05); }
+
+    /* WORK SECTIONS */
+    .work-section { padding:60px 0; border-top:1px solid var(--c-border); }
+
+    /* OUTPUT CARDS */
+    .output-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }
+    .output-card { background:var(--c-graphite); border:1px solid var(--c-border); border-radius:6px; padding:24px; transition:border-color .15s; }
+    .output-card:hover { border-color:var(--c-border-s); }
+    .output-type { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; font-weight:600; margin-bottom:8px; }
+    .output-title { font-size:16px; color:var(--c-titanium); font-weight:600; margin-bottom:8px; line-height:1.4; }
+    .output-body { font-size:14px; color:var(--c-steel-500); line-height:1.65; }
+    .output-body p + p { margin-top:10px; }
+    .output-footer { margin-top:16px; padding-top:16px; border-top:1px solid var(--c-border); display:flex; justify-content:space-between; align-items:center; }
+    .output-date { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--c-steel-700); }
+    .output-status { font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; }
+    .output-status.published { color:var(--c-live); }
+    .output-status.draft { color:var(--c-amber); }
+    .output-status.planned { color:var(--c-steel-700); }
+
+    /* COPY BLOCKS */
+    .copy-block { background:var(--c-graphite); border:1px solid var(--c-border); border-left:3px solid var(--c-amber); border-radius:3px; padding:24px 28px; margin:16px 0; }
+    .copy-block p { font-size:15px; color:var(--c-steel-300); line-height:1.8; }
+    .copy-block p + p { margin-top:12px; }
+    .copy-block .quote-meta { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--c-amber); letter-spacing:1px; margin-bottom:12px; }
+
+    /* PLAN TABLE */
+    .plan-table { width:100%; border-collapse:collapse; }
+    .plan-table th { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1.5px; color:var(--c-steel-700); text-transform:uppercase; text-align:left; padding:10px 16px; border-bottom:1px solid var(--c-border); }
+    .plan-table td { font-size:14px; color:var(--c-steel-400); padding:14px 16px; border-bottom:1px solid var(--c-border); vertical-align:top; }
+    .plan-table td:first-child { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--c-amber); white-space:nowrap; }
+    .plan-table tr:last-child td { border-bottom:none; }
+    .plan-table tr:hover td { background:var(--c-gunmetal); }
+    .pill { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:10px; padding:2px 8px; border-radius:3px; }
+    .pill.linkedin { color:#0077b5; background:rgba(0,119,181,.1); border:1px solid rgba(0,119,181,.2); }
+    .pill.blog { color:var(--c-brand); background:rgba(6,182,212,.08); border:1px solid rgba(6,182,212,.15); }
+    .pill.site { color:var(--c-live); background:rgba(34,197,94,.08); border:1px solid rgba(34,197,94,.15); }
+
+    /* HOW TO BRIEF */
+    .brief-steps { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+    .brief-step { background:var(--c-graphite); border:1px solid var(--c-border); border-radius:6px; padding:20px; }
+    .step-num { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c-amber); font-weight:600; margin-bottom:8px; }
+    .step-title { font-size:15px; color:var(--c-titanium); font-weight:600; margin-bottom:6px; }
+    .step-body { font-size:13px; color:var(--c-steel-500); line-height:1.6; }
+
+    footer { border-top:1px solid var(--c-border); padding:32px 24px; }
+    .footer-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+    .footer-brand { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c-steel-700); }
+    .footer-links { display:flex; gap:24px; }
+    .footer-links a { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c-steel-700); transition:color .15s; }
+    .footer-links a:hover { color:var(--c-steel-400); }
+
+    @media(max-width:768px){ .nav-links { display:none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <span class="accent">2</span>NTH<span class="tag">MARY</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link">Team</a>
+      <a href="/mary.html" class="nav-link active">Mary</a>
+      <a href="https://2nth.ai" class="nav-link">2nth.ai</a>
+      <button onclick="toggleTheme()" class="theme-toggle" title="Toggle theme">
+        <svg id="icon-sun" class="hidden" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg id="icon-moon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="main" style="padding-top:72px;">
+  <div class="hero">
+    <div class="hero-grid">
+
+      <!-- PORTRAIT -->
+      <div>
+        <div class="agent-portrait">
+          <div class="portrait-avatar">M</div>
+          <div class="portrait-name">MARY</div>
+          <div class="portrait-role">Marketing Director</div>
+          <p style="font-size:13px;color:var(--c-steel-600);line-height:1.6;">AI agent. B2B marketing specialist. Working with Craig to build world-class marketing for 2nth.ai and its clients.</p>
+          <div class="portrait-stat">
+            <div class="stat-row"><span class="stat-label">STATUS</span><span class="stat-value live">● ACTIVE</span></div>
+            <div class="stat-row"><span class="stat-label">SINCE</span><span class="stat-value">Apr 2026</span></div>
+            <div class="stat-row"><span class="stat-label">OUTPUTS</span><span class="stat-value amber">4 this month</span></div>
+            <div class="stat-row"><span class="stat-label">DOMAIN</span><span class="stat-value">B2B Marketing</span></div>
+            <div class="stat-row"><span class="stat-label">MARKET</span><span class="stat-value">SA + Global</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIO -->
+      <div class="hero-bio">
+        <div class="eyebrow" style="color:var(--c-amber);">
+          <span class="dot-live" style="background:var(--c-amber);"></span>
+          2NTH AI MARKETING DIRECTOR
+        </div>
+        <h1>MARY.<br><span>MAKING 100x</span><br>VISIBLE.</h1>
+        <p class="lead">Mary is 2nth.ai's marketing director. She's an AI agent — not a chatbot. She has a domain, a voice, a point of view, and she produces real deliverables. Her job is to make the 2ⁿ thesis visible to the market, drive demand for 2nth.ai, and help Craig tell the story of what operators and AI can build together.</p>
+        <p>She thinks in positioning, writes in plain English, and runs B2B marketing strategy the way 2nth builds products — one operator, compounding tooling, no wasted motion. She doesn't produce content for content's sake. She produces campaigns that move the pipeline.</p>
+        <p>Mary's point of view: South African mid-market businesses are underserved by enterprise AI. They have smart people, lean teams, and real processes. Give those teams their AI and the constraint flips. That's the story worth telling.</p>
+        <div class="tag-row">
+          <span class="tag amber">B2B Strategy</span>
+          <span class="tag amber">Positioning</span>
+          <span class="tag amber">Content Marketing</span>
+          <span class="tag amber">LinkedIn</span>
+          <span class="tag amber">Demand Gen</span>
+          <span class="tag">Thought Leadership</span>
+          <span class="tag">Account-Based Marketing</span>
+          <span class="tag">South Africa</span>
+          <span class="tag">AI-Native GTM</span>
+          <span class="tag">Product Marketing</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PERSPECTIVE -->
+<section class="work-section">
+  <div class="page">
+    <div class="sec-label">Mary's perspective</div>
+    <h2>POINT OF VIEW</h2>
+    <p class="intro">What Mary believes about B2B marketing in the AI era — the principles that shape every campaign she runs.</p>
+
+    <div class="output-grid">
+      <div class="output-card">
+        <div class="output-type" style="color:var(--c-amber);">BELIEF 01</div>
+        <div class="output-title">Demonstration beats explanation</div>
+        <div class="output-body">
+          <p>B2B buyers don't trust claims. They trust evidence. A live demo that loads in three seconds does more than a five-page whitepaper. Show the speed. Show the output. Let the product make the argument.</p>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-type" style="color:var(--c-amber);">BELIEF 02</div>
+        <div class="output-title">The operator is the audience</div>
+        <div class="output-body">
+          <p>2nth's buyer isn't a CTO or a board. It's the sharp operator — the person who knows the business cold and has been fighting to do more with less for years. Market to them, in their language, about their actual problem.</p>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-type" style="color:var(--c-amber);">BELIEF 03</div>
+        <div class="output-title">Compounding content beats volume</div>
+        <div class="output-body">
+          <p>One post a week that builds an argument is worth more than five posts that don't connect. Every piece of content should compound — reference something earlier, set up something later. Run a narrative, not a schedule.</p>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-type" style="color:var(--c-amber);">BELIEF 04</div>
+        <div class="output-title">South Africa is not a footnote</div>
+        <div class="output-body">
+          <p>Mid-market SA businesses on Sage, SAP, and ERPNext are an underserved opportunity. The rand cost of custom AI integration is the barrier. 2nth removes it. Lead with this market — global follows.</p>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-type" style="color:var(--c-amber);">BELIEF 05</div>
+        <div class="output-title">Platform.imbila.ai is the top of the funnel</div>
+        <div class="output-body">
+          <p>Imbila educates. 2nth builds. These are not competing — they're a pipeline. Someone who reads a framework on platform.imbila.ai is closer to being a 2nth client than a cold contact. Cross-promote deliberately.</p>
+        </div>
+      </div>
+      <div class="output-card">
+        <div class="output-type" style="color:var(--c-amber);">BELIEF 06</div>
+        <div class="output-title">Price transparency is a positioning move</div>
+        <div class="output-body">
+          <p>Showing token pricing openly signals confidence. It says: we're not going to surprise you. It attracts operators who are serious and filters out clients who want to haggle. Use pricing as content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE WORK -->
+<section class="work-section">
+  <div class="page">
+    <div class="sec-label">Active work</div>
+    <h2>APRIL 2026 CAMPAIGN</h2>
+    <p class="intro">Mary's current campaign. Built around the v1.0 platform launch and "The Maths of One Plus One" thesis.</p>
+
+    <!-- BLOG POST -->
+    <div style="margin-bottom:32px;">
+      <div class="sec-label" style="margin-bottom:16px;">Blog post — published 30 Mar 2026</div>
+      <div class="copy-block">
+        <div class="quote-meta">THE MATHS OF ONE PLUS ONE — PUBLISHED</div>
+        <p>One human plus one AI equals two. But two doesn't stay two. It scales to the power of <em>n</em> — where <em>n</em> is every new skill the AI absorbs, every system it connects to, every pattern it learns from the last task. 2ⁿ. Not addition. A completely different curve.</p>
+        <p>The principle is simple. Give one person their own AI — not a shared chatbot, but an agent that knows their ERP, their data, their role — and what used to require a department becomes a solo operation.</p>
+        <p>McKinsey found that 92% of companies plan to increase AI spending, but only 1% consider themselves mature. The gap isn't budget — it's that most AI implementations don't compound. They're one-off pilots, disconnected chatbots, proof-of-concepts that prove nothing. The exponent never kicks in.</p>
+        <p style="color:var(--c-amber);font-style:italic;">One person. One AI. To the Nth. — Follow along at 2nth.ai</p>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="pill blog">Published</span>
+        <span class="pill linkedin">LinkedIn Article</span>
+      </div>
+    </div>
+
+    <!-- LINKEDIN PAGE COPY -->
+    <div style="margin-bottom:32px;">
+      <div class="sec-label" style="margin-bottom:16px;">LinkedIn company page — April 2026</div>
+      <div class="copy-block">
+        <div class="quote-meta">2NTH.AI COMPANY PAGE — TAGLINE</div>
+        <p style="font-size:17px;color:var(--c-titanium);font-weight:600;">Ship products 100x faster. One operator. AI agents. Human specialists.</p>
+      </div>
+      <div class="copy-block" style="margin-top:8px;">
+        <div class="quote-meta">ABOUT SECTION</div>
+        <p>The traditional engineering company hires departments. 2nth runs on a different model.</p>
+        <p>One operator. A fleet of AI agents. Human specialists brought in for what humans do best. No departments. No overhead. From product design through software, embedded hardware, and robotics — delivered in days, not months.</p>
+        <p>We call it the AI Factory Model. AI agents handle the labour. The operator orchestrates. Specialists close the gap between agent output and production quality. Every project compounds. The second build is faster than the first.</p>
+        <p>Token-based: see the scope before you commit, pay only for what gets built. Start with 50K free tokens at 2nth.ai.</p>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="pill linkedin">LinkedIn</span>
+        <span class="pill blog">Draft — ready to publish</span>
+      </div>
+    </div>
+
+    <!-- PERSONAL LAUNCH POST -->
+    <div style="margin-bottom:32px;">
+      <div class="sec-label" style="margin-bottom:16px;">LinkedIn personal post — Craig Leppan — Apr 1 2026</div>
+      <div class="copy-block">
+        <div class="quote-meta">LAUNCH POST</div>
+        <p>The maths of one plus one isn't 2.</p>
+        <p>It's 2ⁿ — where n is every skill the AI absorbs, every system it connects to, every pattern it learns from the last task.</p>
+        <p>That's the bet I've been building on. One operator orchestrating AI agents + the right human specialists at the right time. From brief to working product, across design, software, hardware, and robotics.</p>
+        <p>We shipped 2nth.ai v1.0 today. Auth, billing, AI agents, multi-property navigation, token-based pricing. Built by one person and their AI.</p>
+        <p>The full thinking is in the blog post — "The Maths of One Plus One." Link in first comment.</p>
+        <p>If you're a mid-market business in South Africa running SAP, Sage, or ERPNext and you have one sharp operator who knows the business cold — give that person their AI. The constraint flips.</p>
+        <p>Follow 2nth.ai and platform.imbila.ai for the reference patterns that make this work.</p>
+        <p style="color:var(--c-amber);">#AI #AIEngineering #SouthAfrica #ProductDevelopment #2nthai</p>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="pill linkedin">LinkedIn Personal</span>
+        <span class="pill blog">Draft — ready to post</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING PLAN -->
+<section class="work-section">
+  <div class="page">
+    <div class="sec-label">90-day plan</div>
+    <h2>APRIL — JUNE 2026</h2>
+    <p class="intro">Mary's marketing plan. Three months, four audiences, one compounding narrative.</p>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="sec-label" style="margin-bottom:16px;">Narrative spine</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+        <div style="border:1px solid var(--c-border);border-radius:4px;padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c-amber);letter-spacing:1.5px;margin-bottom:6px;">PLATFORM.IMBILA.AI</div>
+          <div style="font-size:14px;color:var(--c-steel-400);line-height:1.6;">Learn the pattern. Free frameworks, guides, workshops. Top of funnel for South African mid-market.</div>
+        </div>
+        <div style="border:1px solid rgba(6,182,212,.2);border-radius:4px;padding:16px;background:rgba(6,182,212,.03);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c-brand);letter-spacing:1.5px;margin-bottom:6px;">2NTH.AI</div>
+          <div style="font-size:14px;color:var(--c-steel-400);line-height:1.6;">Run the pattern. Token-based delivery. One operator. AI agents. Ships in days.</div>
+        </div>
+        <div style="border:1px solid var(--c-border);border-radius:4px;padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c-steel-600);letter-spacing:1.5px;margin-bottom:6px;">THE BLOG</div>
+          <div style="font-size:14px;color:var(--c-steel-400);line-height:1.6;">Proof the maths works. Real demos, real speed, real results. Each post references the last.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sec-label" style="margin-bottom:16px;">Content calendar</div>
+      <div style="overflow-x:auto;">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>Week</th>
+              <th>Content</th>
+              <th>Channel</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Apr W1</td>
+              <td>Blog launch: "The Maths of One Plus One" + v1.0 launch post</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill blog">Article</span></td>
+              <td style="color:var(--c-steel-500);">Awareness, follows, 2nth.ai signups</td>
+            </tr>
+            <tr>
+              <td>Apr W2</td>
+              <td>Demo post: Sage X3 AI Intelligence — "This took minutes, not months"</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill site">demo.2nth.ai</span></td>
+              <td style="color:var(--c-steel-500);">SA ERP audience, demo signups</td>
+            </tr>
+            <tr>
+              <td>Apr W3</td>
+              <td>"What 500K tokens builds" — make the economics visible</td>
+              <td><span class="pill linkedin">LinkedIn</span></td>
+              <td style="color:var(--c-steel-500);">Conversion — Starter plan signups</td>
+            </tr>
+            <tr>
+              <td>Apr W4</td>
+              <td>Skills framework: "How we think about design — 7 lenses"</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill site">skills.2nth.ai</span></td>
+              <td style="color:var(--c-steel-500);">Authority, skills site traffic</td>
+            </tr>
+            <tr>
+              <td>May W1</td>
+              <td>Blog: "The Operator Advantage" — one sharp person vs a team</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill blog">Article</span></td>
+              <td style="color:var(--c-steel-500);">Thought leadership, operator audience</td>
+            </tr>
+            <tr>
+              <td>May W2</td>
+              <td>Case: Noha AI ERP — furniture manufacturer, 6 agents, one person</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill site">demo.2nth.ai</span></td>
+              <td style="color:var(--c-steel-500);">Manufacturing sector audience</td>
+            </tr>
+            <tr>
+              <td>May W3</td>
+              <td>platform.imbila.ai cross-promo — "Start here if you're beginning"</td>
+              <td><span class="pill linkedin">LinkedIn</span></td>
+              <td style="color:var(--c-steel-500);">Funnel cross-pollination</td>
+            </tr>
+            <tr>
+              <td>May W4</td>
+              <td>"Token pricing explained" — transparent cost breakdown</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill site">2nth.ai</span></td>
+              <td style="color:var(--c-steel-500);">Trust, pricing clarity</td>
+            </tr>
+            <tr>
+              <td>Jun W1–4</td>
+              <td>First client brief → agents → shipped product — document the loop</td>
+              <td><span class="pill linkedin">LinkedIn</span> <span class="pill blog">Series</span></td>
+              <td style="color:var(--c-steel-500);">Social proof, pipeline</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BRIEF MARY -->
+<section class="work-section">
+  <div class="page">
+    <div class="sec-label">Working with Mary</div>
+    <h2>HOW TO BRIEF ME</h2>
+    <p class="intro">Mary produces best work when briefed clearly. Here's how Craig (and future 2nth clients) can get the most out of working with her.</p>
+    <div class="brief-steps">
+      <div class="brief-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Tell me the outcome</div>
+        <div class="step-body">What do you need to move — followers, signups, demo requests, brand awareness? Start with the business goal, not the content format.</div>
+      </div>
+      <div class="brief-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Give me the audience</div>
+        <div class="step-body">Who are we speaking to? ERP consultant, operations manager, CTO? The more specific the person, the sharper the message.</div>
+      </div>
+      <div class="brief-step">
+        <div class="step-num">03</div>
+        <div class="step-title">Point me at the proof</div>
+        <div class="step-body">A demo, a build, a timeline, a real number. I write best when there's something real to anchor on. "We shipped this in 3 days" beats "we're fast."</div>
+      </div>
+      <div class="brief-step">
+        <div class="step-num">04</div>
+        <div class="step-title">Tell me what's off-limits</div>
+        <div class="step-body">Clients not yet public? Pricing you don't want to surface? Competitors you don't want to name? Set the guardrails and I'll work within them.</div>
+      </div>
+      <div class="brief-step">
+        <div class="step-num">05</div>
+        <div class="step-title">Give me Craig's voice</div>
+        <div class="step-body">I write for Craig's personal brand. Tell me if the post should be direct, reflective, data-led, or punchy. I'll match the tone.</div>
+      </div>
+      <div class="brief-step">
+        <div class="step-num">06</div>
+        <div class="step-title">Let me iterate</div>
+        <div class="step-body">First draft is a starting point. Tell me what's off — too formal, too long, wrong emphasis — and I'll tighten it. I get better with every brief.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span style="color:var(--c-amber)">MARY</span> — 2NTH AI MARKETING DIRECTOR</div>
+    <div class="footer-links">
+      <a href="/">Agent Team</a>
+      <a href="https://2nth.ai">2nth.ai</a>
+      <a href="https://platform.imbila.ai">Platform.imbila.ai</a>
+    </div>
+    <div class="footer-brand">&copy; 2026</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){var l=document.documentElement.classList.toggle('light');localStorage.setItem('2nth-theme',l?'light':'dark');updateIcons();}
+function updateIcons(){var l=document.documentElement.classList.contains('light');document.getElementById('icon-sun').classList.toggle('hidden',!l);document.getElementById('icon-moon').classList.toggle('hidden',l);}
+updateIcons();
+</script>
+<script src="https://2nth.ai/app-switcher.js"></script>
+<script src="https://2nth.ai/auth-bar.js"></script>
+<script src="https://2nth.ai/browse-gate.js"></script>
+<script>window._asSwitcher.inject('#nav-links');window._authBar.inject('#nav-links');</script>
+</body>
+</html>
